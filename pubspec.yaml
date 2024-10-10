@@ -1,0 +1,42 @@
+name: contapp
+description: "A new Flutter project."
+publish_to: "none"
+version: 1.0.0+1
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  intl: ^0.19.0
+  flutter_native_splash: ^2.4.1
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+#================ Importar fuentes =================#
+
+fonts:
+  - family: RobotoMono
+    fonts:
+      - asset: assets/fonts/RobotoMono-ThinItalic.ttf
+      - asset: assets/fonts/RobotoMono-Thin.ttf
+      - asset: assets/fonts/RobotoMono-SemiBoldItalic.ttf
+      - asset: assets/fonts/RobotoMono-SemiBold.ttf
+      - asset: assets/fonts/RobotoMono-Regular.ttf
+      - asset: assets/fonts/RobotoMono-MediumItalic.ttf
+      - asset: assets/fonts/RobotoMono-Medium.ttf
+      - asset: assets/fonts/RobotoMono-LightItalic.ttf
+      - asset: assets/fonts/RobotoMono-Light.ttf
+      - asset: assets/fonts/RobotoMono-italic.ttf
+      - asset: assets/fonts/RobotoMono-ExtraLightItalic.ttf
+      - asset: assets/fonts/RobotoMono-ExtraLight.ttf
+      - asset: assets/fonts/RobotoMono-BoldItalic.ttf
+        weight: 700
