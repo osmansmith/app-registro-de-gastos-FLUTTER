@@ -1,10 +1,11 @@
+import 'package:contapp/design/errors.dart';
+
 String? validateInput(value) {
   if (value == null || value.isEmpty) {
-    // return WeinFluErrors.userError;
+    return SysifosErrors.userError;
   }
   if (value!.length >= 10) {
-    // return WeinFluErrors.userErrorLen;
-    return 'supera el maximo';
+    return SysifosErrors.userErrorLen;
   }
   return null;
 }

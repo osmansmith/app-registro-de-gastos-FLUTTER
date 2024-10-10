@@ -1,4 +1,5 @@
 import 'package:contapp/config/providers/user_provider.dart';
+import 'package:contapp/design/errors.dart';
 import 'package:contapp/pages/helper/validate_input.dart';
 import 'package:flutter/material.dart';
 import 'package:contapp/config/app_routes.dart';
@@ -68,6 +69,7 @@ class _LogInPageState extends State<LogInPage> {
                         padding: const EdgeInsets.only(left: 24, bottom: 4),
                         decoration: userContainerDecoration,
                         child: TextFormField(
+                            key: const Key('input-name'),
                             controller: userInputController,
                             style: Theme.of(context).textTheme.labelSmall,
                             validator: (value) => validateInput(value),
@@ -99,9 +101,10 @@ class _LogInPageState extends State<LogInPage> {
                         margin: const EdgeInsets.symmetric(vertical: 24),
                         decoration: pswContainerDecoration,
                         child: TextFormField(
+                            key: const Key('input-psw'),
                             validator: (value) {
                               if (value == null || value.isEmpty) {
-                                // return WeinFluErrors.userPsw;
+                                return SysifosErrors.userPsw;
                               }
                               return null;
                             },
@@ -159,7 +162,6 @@ class _LogInPageState extends State<LogInPage> {
                         child: ElevatedButton(
                           onPressed: () {
                             if (_formLoginKey.currentState!.validate()) {
-                              print('Todos lo campos estan ok 🤯');
                               // _formLoginKey.currentState!.save();
                               userName = userInputController.text;
                               UserProvider.of(context).userData.name = userName;
